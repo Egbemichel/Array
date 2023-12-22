@@ -1,42 +1,26 @@
-/*C++ Program that searches for the largest and smallest numbers in an array of known length and switches their indexes*/
+/* C++ program that replaces every element in an array by the element multiplied by its index*/
+
 
 #include <iostream>
 
 using namespace std;
 
 int main()
-{
-    int n=0;
-    int numbers[6];
-    cout << "Enter numbers in array:\n";
-    while(n<6){
+{   int n;
+    int numbers[5];
+    cout << "Enter numbers in array: "<< endl;
+    while(n<5){
         cin >> numbers[n];
         ++n;
     }
-    n=1;
-    int maxn=numbers[0],minn=numbers[0];
-    int a=0,b=0;
-    while(n<6){
-    if(maxn<numbers[n]){
-        maxn=numbers[n];
-        a=n;
-
-    }else{}
-    if(minn>numbers[n]){
-        minn=numbers[n];
-        b=n;
-
-    }else{}
-    ++n;
-    }
-
-    int temp=numbers[a];
-    numbers[a]=numbers[b];
-    numbers[b]=temp;
-    int i=0;
-    while(i<6){
-        cout <<"Number at index "<<i<<" "<<"is "<<numbers[i]<<endl;
-        ++i;
-    }
+    int i;
+    for(i=0;i<n;++i){
+        numbers[i] = numbers[i]*i;
+        }
+        cout <<"new number at index 0 is " <<numbers[0]<<"\n";
+        cout <<"new number at index 1 is "<<numbers[1]<<"\n";
+        cout <<"new number at index 2 is " <<numbers[2]<<"\n";
+        cout <<"new number at index 3 is " <<numbers[3]<<"\n";
+        cout <<"new number at index 4 is " <<numbers[4];
     return 0;
 }
